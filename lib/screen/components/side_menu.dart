@@ -15,45 +15,21 @@ class SideMenu extends StatelessWidget {
             child: FlutterLogo(),
           ),
           DrawerListTile(
-            title: "Dashboard",
-            svgSrc: "assets/icons/menu_dashboard.svg",
+            title: "Home",
+            icons: Icons.home_outlined,
             press: () {},
           ),
           DrawerListTile(
-            title: "Transaction",
-            svgSrc: "assets/icons/menu_tran.svg",
+            title: "Shorts",
+            icons: Icons.shortcut_outlined,
             press: () {},
           ),
           DrawerListTile(
-            title: "Task",
-            svgSrc: "assets/icons/menu_task.svg",
+            title: "Subscriptions",
+            icons: Icons.subscriptions_outlined,
             press: () {},
           ),
-          DrawerListTile(
-            title: "Documents",
-            svgSrc: "assets/icons/menu_doc.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Store",
-            svgSrc: "assets/icons/menu_store.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Notification",
-            svgSrc: "assets/icons/menu_notification.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Profile",
-            svgSrc: "assets/icons/menu_profile.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Settings",
-            svgSrc: "assets/icons/menu_setting.svg",
-            press: () {},
-          ),
+
         ],
       ),
     );
@@ -65,11 +41,12 @@ class DrawerListTile extends StatelessWidget {
     Key? key,
     // For selecting those three line once press "Command+D"
     required this.title,
-    required this.svgSrc,
+    required this.icons,
     required this.press,
   }) : super(key: key);
 
-  final String title, svgSrc;
+  final String title ;
+  final IconData icons ;
   final VoidCallback press;
 
   @override
@@ -77,12 +54,7 @@ class DrawerListTile extends StatelessWidget {
     return ListTile(
       onTap: press,
       horizontalTitleGap: 20.0,
-      leading: Icon(Icons.home_filled),
-      // leading: SvgPicture.asset(
-      //   svgSrc,
-      //   colorFilter: ColorFilter.mode(Colors.white54, BlendMode.srcIn),
-      //   height: 16,
-      // ),
+      leading: Icon(icons),
       title: Text(
         title,
         style: TextStyle(color: Colors.white54),

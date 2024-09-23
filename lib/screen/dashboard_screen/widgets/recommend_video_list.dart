@@ -3,45 +3,105 @@
 import 'package:flutter/material.dart';
 
 
-
-
-
 class VideoRecommendationList extends StatelessWidget {
   final List<VideoRecommendation> videos = [
     VideoRecommendation(
-      thumbnailUrl: 'https://via.placeholder.com/150',
-      title: 'Responsive Dashboard UI - FLUTTER Tutorial',
-      views: '145K views',
-      time: '2 years ago',
-      duration: '29:33',
+      thumbnailUrl: 'https://img.youtube.com/vi/MQ1_wPyVLVc/maxresdefault.jpg',  // Flutter Crash Course for Beginners
+      title: 'The Best Flutter Course in 3 Hours • Pizza App #1',
+      views: '1M views',
+      time: '3 years ago',
+      duration: '2:00:00',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://via.placeholder.com/150',
-      title: 'Zama Shereen Lalaial - Pashto New Song',
-      views: '60K views',
+      thumbnailUrl: 'https://img.youtube.com/vi/MrPJBAOzKTQ/maxresdefault.jpg',  // Flutter Crash Course for Beginners
+      title: 'Build a Flutter App from Scratch',
+      views: '500K views',
+      time: '2 years ago',
+      duration: '1:20:45',
+    ),
+    VideoRecommendation(
+      thumbnailUrl: 'https://img.youtube.com/vi/mMMbwdDqljc/maxresdefault.jpg',  // Flutter Animation Basics
+      title: 'Flutter NEWS App Demo || Flutter NEWS app tutorials in Hindi/Urdu',
+      views: '220K views',
+      time: '1 year ago',
+      duration: '15:10',
+    ),
+    VideoRecommendation(
+      thumbnailUrl: 'https://img.youtube.com/vi/YATaW7gOBYQ/0.jpg',  // State Management with Provider
+      title: 'State Management with Provider',
+      views: '340K views',
+      time: '2 years ago',
+      duration: '40:23',
+    ),
+    VideoRecommendation(
+      thumbnailUrl: 'https://img.youtube.com/vi/NsUWxBRITD8/0.jpg',  // Best Practices for Flutter Forms
+      title: 'Best Practices for Flutter Forms',
+      views: '90K views',
+      time: '1 year ago',
+      duration: '25:30',
+    ),
+    VideoRecommendation(
+      thumbnailUrl: 'https://img.youtube.com/vi/lJpEMynG_dg/0.jpg',  // Flutter Firebase Tutorial for Beginners
+      title: 'Flutter Firebase Tutorial for Beginners',
+      views: '300K views',
+      time: '6 months ago',
+      duration: '1:15:00',
+    ),
+    VideoRecommendation(
+      thumbnailUrl: 'https://img.youtube.com/vi/U6H_bG0R-Jo/0.jpg',  // Flutter vs React Native
+      title: 'Flutter vs React Native',
+      views: '400K views',
+      time: '1 year ago',
+      duration: '12:45',
+    ),
+    VideoRecommendation(
+      thumbnailUrl: 'https://img.youtube.com/vi/BP8FYVYz7S4/0.jpg',  // Networking in Flutter
+      title: 'Networking in Flutter',
+      views: '180K views',
+      time: '1 year ago',
+      duration: '30:00',
+    ),
+    VideoRecommendation(
+      thumbnailUrl: 'https://img.youtube.com/vi/1YzjZn_yN4M/0.jpg',  // Flutter UI Challenges
+      title: 'Flutter UI Challenges',
+      views: '200K views',
+      time: '5 months ago',
+      duration: '45:50',
+    ),
+    VideoRecommendation(
+      thumbnailUrl: 'https://img.youtube.com/vi/p4wI5W8Frs0/0.jpg',  // Advanced Flutter Animations
+      title: 'Advanced Flutter Animations',
+      views: '150K views',
       time: '3 months ago',
-      duration: '23:38',
+      duration: '20:15',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://via.placeholder.com/150',
-      title: '10x Your Speed With Flutter',
-      views: '44K views',
-      time: '4 weeks ago',
-      duration: '8:04',
-    ),
-    VideoRecommendation(
-      thumbnailUrl: 'https://via.placeholder.com/150',
-      title: 'Top 10 Flutter Widgets (for Responsive Layouts)',
-      views: '72K views',
+      thumbnailUrl: 'https://img.youtube.com/vi/Wp3dC3MnKjI/0.jpg',  // Flutter Widget of the Week
+      title: 'Flutter Widget of the Week',
+      views: '250K views',
       time: '2 years ago',
-      duration: '13:17',
+      duration: '10:00',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://via.placeholder.com/150',
-      title: 'Flutter Responsive - Flutter Tips',
-      views: 'Boolean - Playlist',
-      time: '',
-      duration: '10 videos',
+      thumbnailUrl: 'https://img.youtube.com/vi/dh38yqS87C8/0.jpg',  // Building Responsive Apps with Flutter
+      title: 'Building Responsive Apps with Flutter',
+      views: '75K views',
+      time: '1 year ago',
+      duration: '32:00',
+    ),
+    VideoRecommendation(
+      thumbnailUrl: 'https://img.youtube.com/vi/Z1lX7I4gWgY/0.jpg',  // Flutter for Web Tutorial
+      title: 'Flutter for Web Tutorial',
+      views: '110K views',
+      time: '8 months ago',
+      duration: '1:10:20',
+    ),
+    VideoRecommendation(
+      thumbnailUrl: 'https://img.youtube.com/vi/JN5uGajSXL4/0.jpg',  // Integrating APIs in Flutter
+      title: 'Integrating APIs in Flutter',
+      views: '125K views',
+      time: '9 months ago',
+      duration: '35:30',
     ),
   ];
 
@@ -81,6 +141,7 @@ class VideoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(video.thumbnailUrl);
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
@@ -89,9 +150,15 @@ class VideoCard extends StatelessWidget {
           // Thumbnail Image
           Stack(
             children: [
-              Image(image: NetworkImage('https://images.pexels.com/photos/27689131/pexels-photo-27689131/free-photo-of-black-and-white-photograph-of-terraced-rice-fields.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load'), width: 150,
+              Image(
+                image: NetworkImage(video.thumbnailUrl),
+                width: 150,
                 height: 84,
-                fit: BoxFit.cover,),
+                fit: BoxFit.cover,
+              ),
+              // Image(image: NetworkImage('https://images.pexels.com/photos/27689131/pexels-photo-27689131/free-photo-of-black-and-white-photograph-of-terraced-rice-fields.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load'), width: 150,
+              //   height: 84,
+              //   fit: BoxFit.cover,),
               Positioned(
                 bottom: 5,
                 right: 5,

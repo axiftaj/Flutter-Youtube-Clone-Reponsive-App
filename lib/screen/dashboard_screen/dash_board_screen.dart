@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_responsive_admin_panel/screen/dashboard_screen/widgets/header.dart';
 import 'package:flutter_responsive_admin_panel/screen/dashboard_screen/widgets/recommend_video_list.dart';
+import 'package:flutter_responsive_admin_panel/screen/dashboard_screen/widgets/subscribe_button_widget.dart';
 
 import '../../constants.dart';
 import '../../responsive.dart';
@@ -23,8 +24,10 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
           primary: true,
           shrinkWrap: true,
           children: [
-            Header(),
-            SizedBox(height: defaultPadding),
+           const Padding(
+              padding:  EdgeInsets.all(8),
+              child:  Header(),
+            ),
            Row(
              crossAxisAlignment: CrossAxisAlignment.start,
              mainAxisAlignment: MainAxisAlignment.start,
@@ -38,28 +41,26 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                        child: AspectRatio(
                          aspectRatio: 16/9,
                          child: Container(
-                           color: Colors.teal,
+                           decoration: BoxDecoration(
+                             borderRadius: BorderRadius.circular(16),
+                             color: Colors.teal,
+
+                           ),
                          ),
                        ),
                      ),
+                     const Padding(
+                      padding:  EdgeInsets.only(left: 8, right: 8 , top: 8, bottom: 8),
+                      child:  ChannelProfileButtonBar(),
+                    ),
+
                      if (Responsive.isDesktop(context) || Responsive.isTablet(context) )
-                     ListView.builder(
-                         shrinkWrap: true,
-                         physics: NeverScrollableScrollPhysics(),
-                         itemCount: 10,
-                         itemBuilder: (context, index){
-                           return  Padding(
-                             padding: const EdgeInsets.all(8.0),
-                             child: Container(
-                               height: 120,
-                               color: Colors.deepPurple[200],
-                             ),
-                           );
-                         }
-                     ),
+                       VideoRecommendationList(),
+
                    ],
                  ),
                ),
+
                if (Responsive.isDesktop(context))
                  Expanded(
                    flex: 1,
@@ -67,7 +68,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                  )
              ],
            ),
-            if (Responsive.isMobile(context))
+            if (Responsive.isMobile(context) || Responsive.isTablet(context))
               VideoRecommendationList()
 
           ],
