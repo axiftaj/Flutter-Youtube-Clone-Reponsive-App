@@ -149,6 +149,7 @@ class VideoCard extends StatelessWidget {
           // Thumbnail Image
           Stack(
             children: [
+             // Image.network(video.thumbnailUrl)
               ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image(
