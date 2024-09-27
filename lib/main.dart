@@ -20,11 +20,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: bgColor,
-        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+        textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: Colors.white),
         canvasColor: secondaryColor,
+
       ),
       home: MultiProvider(
           providers: [

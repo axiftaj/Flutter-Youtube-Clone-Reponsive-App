@@ -9,10 +9,13 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Colors.grey.shade900,
       child: ListView(
         children: [
-          DrawerHeader(
-            child: FlutterLogo(),
+          const DrawerHeader(
+            child: CircleAvatar(
+                backgroundImage: NetworkImage('https://scontent.fisb5-1.fna.fbcdn.net/v/t39.30808-6/299960977_102531995915122_4653635820404764695_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFX8nkxn9FYwPIq_yme-ywXHdMDt3iPGcwd0wO3eI8ZzBo0enTYZGkOiL21m0H8sDbS8YmvKE7r6imYUOxnrcPb&_nc_ohc=7dPlaBNFTZwQ7kNvgGCFaBr&_nc_ht=scontent.fisb5-1.fna&_nc_gid=Ar0O4JFhbxsbyhx9rEYyi-s&oh=00_AYDJhaWqKxvz5IhYTyIlMj9LZxFnGZCtPOZaxZyi4PowMw&oe=66FC5210')
+            ),
           ),
           DrawerListTile(
             title: "Home",

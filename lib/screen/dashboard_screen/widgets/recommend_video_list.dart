@@ -27,78 +27,78 @@ class VideoRecommendationList extends StatelessWidget {
       duration: '15:10',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://img.youtube.com/vi/YATaW7gOBYQ/0.jpg',  // State Management with Provider
-      title: 'State Management with Provider',
+      thumbnailUrl: 'https://img.youtube.com/vi/Ow20XapS7Y8/0.jpg',  // State Management with Provider
+      title: 'Introduction to OOP & Roadmap || Dart OOP Tutorials For Beginners in Hindi/Urdu',
       views: '340K views',
       time: '2 years ago',
       duration: '40:23',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://img.youtube.com/vi/NsUWxBRITD8/0.jpg',  // Best Practices for Flutter Forms
-      title: 'Best Practices for Flutter Forms',
+      thumbnailUrl: 'https://img.youtube.com/vi/-jcjhbOpDTg/0.jpg',  // Best Practices for Flutter Forms
+      title: '| Flutter Bloc Patterns || Flutter Clean Architecture with Bloc State Management',
       views: '90K views',
       time: '1 year ago',
       duration: '25:30',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://img.youtube.com/vi/lJpEMynG_dg/0.jpg',  // Flutter Firebase Tutorial for Beginners
-      title: 'Flutter Firebase Tutorial for Beginners',
+      thumbnailUrl: 'https://img.youtube.com/vi/D4nhaszNW4o/0.jpg',  // Flutter Firebase Tutorial for Beginners
+      title: 'Flutter Basics by a REAL Project',
       views: '300K views',
       time: '6 months ago',
       duration: '1:15:00',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://img.youtube.com/vi/U6H_bG0R-Jo/0.jpg',  // Flutter vs React Native
-      title: 'Flutter vs React Native',
+      thumbnailUrl: 'https://img.youtube.com/vi/kJQCLrExrns/0.jpg',  // Flutter vs React Native
+      title: 'Top 7 Flutter Animations',
       views: '400K views',
       time: '1 year ago',
       duration: '12:45',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://img.youtube.com/vi/BP8FYVYz7S4/0.jpg',  // Networking in Flutter
-      title: 'Networking in Flutter',
+      thumbnailUrl: 'https://img.youtube.com/vi/70UhM3mx4Cw/0.jpg',  // Networking in Flutter
+      title: '📱DOPE Animations • Flutter Tutorial ♡',
       views: '180K views',
       time: '1 year ago',
       duration: '30:00',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://img.youtube.com/vi/1YzjZn_yN4M/0.jpg',  // Flutter UI Challenges
-      title: 'Flutter UI Challenges',
+      thumbnailUrl: 'https://img.youtube.com/vi/mhxoXm8lWIo/0.jpg',  // Flutter UI Challenges
+      title: 'Top 30 Flutter Tips and Tricks',
       views: '200K views',
       time: '5 months ago',
       duration: '45:50',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://img.youtube.com/vi/p4wI5W8Frs0/0.jpg',  // Advanced Flutter Animations
-      title: 'Advanced Flutter Animations',
+      thumbnailUrl: 'https://img.youtube.com/vi/5-V0-y1iP3Q/0.jpg',  // Advanced Flutter Animations
+      title: 'React Native vs Flutter | Which one should you Learn in 2022 ?',
       views: '150K views',
       time: '3 months ago',
       duration: '20:15',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://img.youtube.com/vi/Wp3dC3MnKjI/0.jpg',  // Flutter Widget of the Week
-      title: 'Flutter Widget of the Week',
+      thumbnailUrl: 'https://img.youtube.com/vi/fDTf1mk-jQg/0.jpg',  // Flutter Widget of the Week
+      title: 'Learn Mongodb aggregation pipelines',
       views: '250K views',
       time: '2 years ago',
       duration: '10:00',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://img.youtube.com/vi/dh38yqS87C8/0.jpg',  // Building Responsive Apps with Flutter
-      title: 'Building Responsive Apps with Flutter',
+      thumbnailUrl: 'https://img.youtube.com/vi/HD5gYnspYzk/0.jpg',  // Building Responsive Apps with Flutter
+      title: 'Adaptive vs. Responsive | Decoding Flutter',
       views: '75K views',
       time: '1 year ago',
       duration: '32:00',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://img.youtube.com/vi/Z1lX7I4gWgY/0.jpg',  // Flutter for Web Tutorial
-      title: 'Flutter for Web Tutorial',
+      thumbnailUrl: 'https://img.youtube.com/vi/GYOqItTEg1g/0.jpg',  // Flutter for Web Tutorial
+      title: 'Make HTTP Requests with Flutter',
       views: '110K views',
       time: '8 months ago',
       duration: '1:10:20',
     ),
     VideoRecommendation(
-      thumbnailUrl: 'https://img.youtube.com/vi/JN5uGajSXL4/0.jpg',  // Integrating APIs in Flutter
-      title: 'Integrating APIs in Flutter',
+      thumbnailUrl: 'https://img.youtube.com/vi/5AxWC49ZMzs/0.jpg',  // Integrating APIs in Flutter
+      title: 'Async vs Isolates | Decoding Flutter',
       views: '125K views',
       time: '9 months ago',
       duration: '35:30',
@@ -110,7 +110,7 @@ class VideoRecommendationList extends StatelessWidget {
     return ListView.builder(
       itemCount: videos.length,
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const  NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return VideoCard(video: videos[index]);
       },
@@ -137,11 +137,10 @@ class VideoRecommendation {
 class VideoCard extends StatelessWidget {
   final VideoRecommendation video;
 
-  VideoCard({required this.video});
+  const VideoCard({required this.video});
 
   @override
   Widget build(BuildContext context) {
-    print(video.thumbnailUrl);
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
@@ -150,11 +149,14 @@ class VideoCard extends StatelessWidget {
           // Thumbnail Image
           Stack(
             children: [
-              Image(
-                image: NetworkImage(video.thumbnailUrl),
-                width: 150,
-                height: 84,
-                fit: BoxFit.cover,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image(
+                  image: NetworkImage(video.thumbnailUrl),
+                  width: 150,
+                  height: 84,
+                  fit: BoxFit.cover,
+                ),
               ),
               // Image(image: NetworkImage('https://images.pexels.com/photos/27689131/pexels-photo-27689131/free-photo-of-black-and-white-photograph-of-terraced-rice-fields.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load'), width: 150,
               //   height: 84,
@@ -167,10 +169,10 @@ class VideoCard extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
                   child: Text(
                     video.duration,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                    ),
+                    style: Theme.of(context).textTheme.titleSmall!.copyWith(fontWeight: FontWeight.bold),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+
                   ),
                 ),
               ),

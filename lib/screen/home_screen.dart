@@ -15,13 +15,12 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
 
-
-
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+
       key: context.read<MenuAppController>().scaffoldKey,
-      drawer: SideMenu(),
+      drawer: const SideMenu(),
       body: SafeArea(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
