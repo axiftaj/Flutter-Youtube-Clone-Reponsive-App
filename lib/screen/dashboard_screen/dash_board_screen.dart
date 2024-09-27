@@ -1,15 +1,5 @@
-
-
-
 import 'package:flutter/material.dart';
-import 'package:flutter_responsive_admin_panel/screen/dashboard_screen/widgets/comment_list_wideget.dart';
-import 'package:flutter_responsive_admin_panel/screen/dashboard_screen/widgets/header.dart';
-import 'package:flutter_responsive_admin_panel/screen/dashboard_screen/widgets/recommend_video_list.dart';
-import 'package:flutter_responsive_admin_panel/screen/dashboard_screen/widgets/channel_profile_widget.dart';
-import 'package:flutter_responsive_admin_panel/screen/dashboard_screen/widgets/video_description_box_widget.dart';
-import 'package:flutter_responsive_admin_panel/screen/dashboard_screen/widgets/youtube_video_widget.dart';
-
-import '../../constants.dart';
+import 'widgets/widgets.dart';
 import '../../responsive.dart';
 
 class DashBoardScreen extends StatefulWidget {
@@ -66,7 +56,6 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                    flex: 1,
                    child: VideoRecommendationList(),
                  ),
-
              ],
            ),
             if (Responsive.isMobile(context) || Responsive.isTablet(context))

@@ -158,15 +158,13 @@ class VideoCard extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              // Image(image: NetworkImage('https://images.pexels.com/photos/27689131/pexels-photo-27689131/free-photo-of-black-and-white-photograph-of-terraced-rice-fields.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load'), width: 150,
-              //   height: 84,
-              //   fit: BoxFit.cover,),
+
               Positioned(
                 bottom: 5,
                 right: 5,
                 child: Container(
                   color: Colors.black,
-                  padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                  padding: const  EdgeInsets.symmetric(horizontal: 4, vertical: 2),
                   child: Text(
                     video.duration,
                     style: Theme.of(context).textTheme.titleSmall!.copyWith(fontWeight: FontWeight.bold),

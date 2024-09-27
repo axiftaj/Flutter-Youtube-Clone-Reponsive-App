@@ -4,7 +4,7 @@ import 'package:flutter_responsive_admin_panel/screen/dashboard_screen/widgets/s
 
 import '../../../constants.dart';
 import '../../../responsive.dart';
-import 'like_and_dislike_button_wiidget.dart';
+import 'like_and_dislike_button_widget.dart';
 import 'menu_icon_button_widget.dart';
 
 class ChannelProfileButtonBar extends StatelessWidget {

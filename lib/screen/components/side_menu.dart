@@ -57,10 +57,10 @@ class DrawerListTile extends StatelessWidget {
     return ListTile(
       onTap: press,
       horizontalTitleGap: 20.0,
-      leading: Icon(icons),
+      leading: Icon(icons , color: Colors.white,),
       title: Text(
         title,
-        style: TextStyle(color: Colors.white54),
+          style: Theme.of(context).textTheme.bodyMedium,
       ),
     );
   }

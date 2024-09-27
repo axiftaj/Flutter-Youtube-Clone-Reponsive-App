@@ -54,8 +54,12 @@ class CommentListWidget extends StatelessWidget {
         itemBuilder: (context, index){
         return ListTile(
           leading: CircleAvatar(backgroundImage: NetworkImage(comments[index].userProfile),),
-          title: Text(comments[index].userName),
-          subtitle: Text(comments[index].comment),
+          title: Text(comments[index].userName,
+            style: Theme.of(context).textTheme.titleSmall!.copyWith(color: Colors.white),
+          ),
+          subtitle: Text(comments[index].comment ,
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(fontWeight: FontWeight.w500 ,color: Colors.white),
+          ),
           trailing: const Icon(Icons.more_vert),
         );
         }
