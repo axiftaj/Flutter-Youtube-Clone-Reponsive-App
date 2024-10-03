@@ -36,7 +36,7 @@ class ChannelProfileButtonBar extends StatelessWidget {
           ),
           if(Responsive.isMobile(context))
             const Padding(
-              padding:  EdgeInsets.symmetric(vertical: 10 , horizontal: 10),
+              padding:  EdgeInsets.symmetric(vertical: 10 ),
               child:   Row(
                 children:  [
                   LikeAndDislikeButtonWidget(),
@@ -47,7 +47,6 @@ class ChannelProfileButtonBar extends StatelessWidget {
                 ],
               ),
             )
-
         ],
       ),
     );

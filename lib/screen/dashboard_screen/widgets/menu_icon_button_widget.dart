@@ -13,7 +13,7 @@ class MenuButtonWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(40)
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(),
         child: Row(
           children: [
             IconButton(

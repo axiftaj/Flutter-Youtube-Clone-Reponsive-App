@@ -7,7 +7,7 @@ class VideoDescriptionBoxWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.only(bottom: 8 , left: 10, right: 10),
       child: Container(
         decoration: BoxDecoration(color: Colors.white.withOpacity(.1), borderRadius: BorderRadius.circular(16)),
         child: const Padding(
