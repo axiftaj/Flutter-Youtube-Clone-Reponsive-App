@@ -18,7 +18,7 @@ class MenuButtonWidget extends StatelessWidget {
           children: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.more_horiz_outlined),
+              icon: const Icon(Icons.more_horiz_outlined),
             ),
           ],
         ),

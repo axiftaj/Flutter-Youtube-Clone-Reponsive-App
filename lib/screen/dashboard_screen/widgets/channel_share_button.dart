@@ -17,11 +17,11 @@ class ChannelShareButton extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.share_outlined),
+            icon: const Icon(Icons.share_outlined),
           ),
-          SizedBox(width: 5,),
-          Text('Share'),
-          SizedBox(width: 15,)
+          const SizedBox(width: 5,),
+          const  Text('Share'),
+          const  SizedBox(width: 15,)
         ],
       ),
     );

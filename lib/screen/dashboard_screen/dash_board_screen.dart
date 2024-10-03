@@ -36,7 +36,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                       const  YoutubeVideoWidget(),
                       const SizedBox(height: 12,),
                         Text(
-                      'Top 7 Flutter Animations || Animations Hack',
+                      'Harsh Truth Of Java 2024 |  Ft. Asif Taj',
                          style: Theme.of(context).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
                          maxLines: 2,
                          overflow: TextOverflow.ellipsis,
@@ -58,9 +58,9 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                  ),
              ],
            ),
-            if (Responsive.isMobile(context) || Responsive.isTablet(context))
+            if (Responsive.isMobile(context) )
               const VideoDescriptionBoxWidget(),
-            if (Responsive.isMobile(context))
+            if (Responsive.isMobile(context) || Responsive.isTablet(context))
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: VideoRecommendationList(),

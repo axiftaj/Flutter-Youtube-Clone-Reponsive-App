@@ -150,14 +150,12 @@ class VideoCard extends StatelessWidget {
           Stack(
             children: [
              // Image.network(video.thumbnailUrl)
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image(
-                  image: NetworkImage(video.thumbnailUrl),
-                  width: 150,
-                  height: 84,
-                  fit: BoxFit.cover,
-                ),
+
+              Image(
+                image: NetworkImage(video.thumbnailUrl),
+                width: 150,
+                height: 84,
+                fit: BoxFit.cover,
               ),
 
               Positioned(
@@ -177,7 +175,7 @@ class VideoCard extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           // Video Details
           Expanded(
             child: Column(
@@ -185,7 +183,7 @@ class VideoCard extends StatelessWidget {
               children: [
                 Text(
                   video.title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -193,10 +191,10 @@ class VideoCard extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Text(
                   '${video.views} • ${video.time}',
-                  style: TextStyle(
+                  style:  const TextStyle(
                     color: Colors.grey,
                     fontSize: 14,
                   ),
@@ -205,7 +203,7 @@ class VideoCard extends StatelessWidget {
             ),
           ),
           // Three dots menu icon
-          Icon(
+          const Icon(
             Icons.more_vert,
             color: Colors.white,
           ),

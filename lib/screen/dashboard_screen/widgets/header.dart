@@ -4,15 +4,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../constants.dart';
 import '../../../controller/menu_controller.dart';
 import '../../../responsive.dart';
 import 'package:provider/provider.dart';
 
 class Header extends StatelessWidget {
   const Header({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +19,7 @@ class Header extends StatelessWidget {
       children: [
         if (!Responsive.isDesktop(context))
           IconButton(
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
             onPressed: context.read<MenuAppController>().controlMenu,
           ),
         if (!Responsive.isMobile(context))
@@ -35,11 +34,11 @@ class Header extends StatelessWidget {
         if (!Responsive.isMobile(context))
           Spacer(flex: Responsive.isDesktop(context) ? 1 : 1),
         if (!Responsive.isMobile(context))
-        Expanded(
+          const Expanded(
             flex: 4,
             child: SearchField()),
         if (Responsive.isMobile(context))
-          Spacer(),
+          const  Spacer(),
         if (!Responsive.isMobile(context))
           Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
         if (Responsive.isMobile(context))
@@ -53,7 +52,7 @@ class Header extends StatelessWidget {
           radius: 17,
           backgroundImage: NetworkImage('https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
         ),
-        SizedBox(width: 20,),
+        const  SizedBox(width: 20,),
       ],
     );
   }
@@ -71,7 +70,7 @@ class SearchField extends StatelessWidget {
 
       decoration: InputDecoration(
         hintText: "Search",
-        fillColor: secondaryColor,
+        fillColor:  const Color(0xFF2A2D3E),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(32)
         ), // Adds a border

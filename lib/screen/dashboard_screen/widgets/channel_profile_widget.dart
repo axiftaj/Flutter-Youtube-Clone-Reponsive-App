@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_responsive_admin_panel/screen/dashboard_screen/widgets/channel_share_button.dart';
 import 'package:flutter_responsive_admin_panel/screen/dashboard_screen/widgets/subscribe_button_widget.dart';
 
-import '../../../constants.dart';
+
 import '../../../responsive.dart';
 import 'like_and_dislike_button_widget.dart';
 import 'menu_icon_button_widget.dart';
@@ -38,14 +38,14 @@ class ChannelProfileButtonBar extends StatelessWidget {
             const Padding(
               padding:  EdgeInsets.symmetric(vertical: 10 , horizontal: 10),
               child:   Row(
-              children:  [
+                children:  [
                   LikeAndDislikeButtonWidget(),
-                SizedBox(width: 12,),
+                  SizedBox(width: 12,),
                   ChannelShareButton(),
-                SizedBox(width: 12,),
+                  SizedBox(width: 12,),
                   MenuButtonWidget(),
-              ],
-                      ),
+                ],
+              ),
             )
 
         ],
